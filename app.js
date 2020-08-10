@@ -18,5 +18,5 @@ function CreatePDF() {
       },
     },
   };
-  pdfMake.createPdf(docDefinition).open();
+  pdfMake.createPdf(docDefinition).download($("#title").val());
 }
