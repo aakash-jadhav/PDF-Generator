@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF title</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="skeuos.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+    <div class="container text-center">
+      <h2>PDF Generator</h2>
+      <div class="row">
+        <div class="col">
+          <input
+            class="col-sm-12 col-md-6 col-lg-4"
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter Title"
+          />
+        </div>
+      </div>
+      <hr />
+
+      <textarea
+        class="col-sm-12"
+        name="body"
+        id="main"
+        cols="30"
+        rows="10"
+        placeholder="Enter Content..."
+      ></textarea>
+    </div>
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col">
+          <input type="reset" value = "Clear" onclick="clear()"></input>
+        </div>
+        <div class="col text-right">
+          <!-- <button onclick="CreatePDF()">CLick me</button> -->
+          <input onclick="CreatePDF()" class="green-button" value="Generate PDF">
+        </div>
+      </div>
+    </div>
+  </form>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+  <script src="app.js"></script>
+</html>
+
+
